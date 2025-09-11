@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    port: 
+     - "8080:80"
+    restart: unless-stopped
+    container_name: my-nginx-site   
+
+
+
+
+
+
