@@ -1,52 +1,277 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Моя тестовая страничка</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f4f8;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-        }
-        h1 {
-            color: #2c3e50;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #3498db;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-        button:hover {
-            background-color: #2980b9;
-        }
-        p {
-            font-size: 18px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Константин Дипеж</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #7b68ee, #9d50bb);
+      color: white;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 30px auto;
+      border: 4px solid white;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+
+    .name {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    .handle {
+      text-align: center;
+      color: #ddd;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 14px;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .location {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px 0;
+      font-size: 14px;
+      color: #fff;
+    }
+
+    .location i {
+      margin-right: 8px;
+    }
+
+    .btn-container {
+      display: flex;
+      gap: 10px;
+      margin: 20px 20px 0;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      border-radius: 12px;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    .description {
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      margin: 20px 20px 10px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .hide-btn {
+      float: right;
+      font-size: 12px;
+      color: #a0a0ff;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    .socials {
+      margin: 20px 20px 0;
+    }
+
+    .social-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px;
+      margin: 8px 0;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      font-size: 14px;
+    }
+
+    .social-item i {
+      width: 30px;
+      text-align: center;
+    }
+
+    .contact {
+      margin-top: 20px;
+    }
+
+    .contact-btn {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 10px;
+      border-radius: 12px;
+      font-size: 16px;
+      text-align: left;
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .contact-btn:hover {
+      opacity: 0.9;
+    }
+
+    .instagram {
+      background: #e11d48;
+    }
+
+    .youtube {
+      background: #ff0000;
+    }
+
+    .vk {
+      background: #4a76e0;
+    }
+
+    .email {
+      background: #333;
+    }
+
+    .contact-btn i {
+      width: 24px;
+    }
+  </style>
 </head>
 <body>
-    <h1>iiiiiiПривет! Это моя тестовая страница</h1>
-    <p id="message">Нажми на кнопку, чтобы увидеть сообщение.</p>
-    <button onclick="showMessage()">Показать сообщение</button>
+  <div class="container">
+    <!-- Аватар -->
+    <img src="https://via.placeholder.com/140" alt="Аватар" class="avatar" />
 
-    <script>
-        function showMessage() {
-            const msg = document.getElementById('message');
-            msg.textContent = 'Ура! Ты успешно нажал кнопку!';
-        }
-    </script>
+    <!-- Имя -->
+    <h1 class="name">Константин Дипеж</h1>
+    <p class="handle">@top1ceo</p>
+    <p class="title">Founder & CEO DeusOps, доцент ИТМО и МФТИ</p>
+
+    <!-- Локация -->
+    <div class="location">
+      <i class="fas fa-map-marker-alt"></i> DeusOps
+    </div>
+
+    <!-- Кнопки -->
+    <div class="btn-container">
+      <button class="btn">
+        <i class="fas fa-paper-plane"></i> Написать
+      </button>
+      <button class="btn">
+        <i class="fas fa-share-alt"></i> Поделиться
+      </button>
+    </div>
+
+    <!-- Описание -->
+    <div class="description">
+      <p>Крестный отец DevOps. Создал первую в РФ магистратуру по devops в tier1 it-вузе. Предоставляем услуги аутстафа и консалтинга.</p>
+      <span class="hide-btn">СКРЫТЬ</span>
+    </div>
+
+    <!-- Соцсети -->
+    <div class="socials">
+      <div class="social-item">
+        <i class="fab fa-telegram-plane"></i>
+        <span><strong>DeusOps</strong> Мысли об IT, образовании и играх. И анонсы сообщества DeusOps DevOps-задачник...</span>
+      </div>
+      <div class="social-item">
+        <i class="fab fa-telegram-plane"></i>
+        <span><strong>DeusOps</strong> Твои друзья в айти. Добро пожаловать домой 💜 Наш Клуб: boosty.to/deusops Анонсы...</span>
+      </div>
+      <div class="social-item">
+        <i class="fas fa-coffee"></i>
+        <span><strong>E3N4 ~ кофе//бар</strong> СПб, Шоссе Революции 3к2 Бэнч - утром кофе, вечером пиво А также митапы, лекции...</span>
+      </div>
+      <div class="social-item">
+        <i class="fab fa-telegram-plane"></i>
+        <span><strong>DeusGames</strong> Геймдев студия DeusGames от DeusOps. https://deusgames.ru/</span>
+      </div>
+    </div>
+
+    <!-- Контакты -->
+    <div class="contact">
+      <a href="#" class="contact-btn instagram">
+        <i class="fab fa-instagram"></i> @top1ceo
+      </a>
+      <a href="#" class="contact-btn youtube">
+        <i class="fab fa-youtube"></i> deusops
+      </a>
+      <a href="#" class="contact-btn vk">
+        <i class="fab fa-vk"></i> @deusops
+      </a>
+      <a href="#" class="contact-btn email">
+        <i class="fas fa-envelope"></i> konstantin@deusops.com
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // Анимация кнопок
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.style.transform = 'scale(0.9)';
+        setTimeout(() => {
+          btn.style.transform = '';
+        }, 100);
+      });
+    });
+
+    // Скрыть описание
+    document.querySelector('.hide-btn').addEventListener('click', () => {
+      const desc = document.querySelector('.description');
+      desc.style.display = 'none';
+    });
+  </script>
 </body>
 </html>
