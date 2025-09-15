@@ -212,10 +212,12 @@
       box-shadow: 0 5px 15px rgba(66, 153, 225, 0.2);
     }
 
+    /* НОВЫЙ СТИЛЬ ДЛЯ КНОПОК СОЦСЕТЕЙ */
     .contact {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 15px;
+      margin-bottom: 20px;
     }
 
     .contact-btn {
@@ -223,7 +225,7 @@
       align-items: center;
       justify-content: center;
       gap: 12px;
-      padding: 16px;
+      padding: 18px;
       border-radius: 12px;
       font-size: 16px;
       font-weight: 500;
@@ -231,6 +233,7 @@
       transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
+      text-align: center;
     }
 
     .contact-btn::before {
@@ -348,6 +351,11 @@
       .title {
         font-size: 18px;
       }
+
+      /* Адаптивность для кнопок на мобильных */
+      .contact {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 600px) {
@@ -366,10 +374,6 @@
       
       .title {
         font-size: 16px;
-      }
-      
-      .contact {
-        grid-template-columns: 1fr;
       }
       
       .video-control {
@@ -432,6 +436,7 @@
       <div class="skill">AWS</div>
     </div>
 
+    <!-- Обновленные кнопки соцсетей -->
     <div class="contact">
       <a href="https://t.me/abem" target="_blank" rel="noopener noreferrer" class="contact-btn telegram">
         <i class="fab fa-telegram-plane"></i> Telegram
