@@ -121,7 +121,13 @@
       font-size: 12px;
       color: #a0a0ff;
       cursor: pointer;
-      margin: 0 20px 50px;
+      margin: 0 20px 40px;
+      transition: all 0.3s ease;
+    }
+
+    .hide-btn:hover {
+      color: #ffffff;
+      text-shadow: 0 0 5px rgba(160, 160, 255, 0.8);
     }
 
     .socials {
@@ -137,11 +143,69 @@
       background: rgba(255, 255, 255, 0.1);
       border-radius: 12px;
       font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .social-item:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateX(5px);
     }
 
     .social-item i {
       width: 30px;
       text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    /* Анимации для иконок социальных сетей */
+    .social-item:hover .fa-telegram-plane {
+      transform: rotate(360deg) scale(1.2);
+      color: #0088cc;
+    }
+
+    .social-item:hover .fa-instagram {
+      transform: rotate(360deg) scale(1.2);
+      color: #E1306C;
+      text-shadow: 0 0 10px rgba(225, 48, 108, 0.7);
+    }
+
+    .social-item:hover .fa-youtube {
+      transform: scale(1.3);
+      color: #FF0000;
+      text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    }
+
+    .social-item:hover .fa-vk {
+      transform: scale(1.3);
+      color: #4a76e0;
+      text-shadow: 0 0 10px rgba(74, 118, 224, 0.7);
+    }
+
+    /* Стиль кнопки подписки в стиле YouTube (синяя) */
+    .subscribe-btn {
+      display: inline-block;
+      background: #1e90ff; /* Синий цвет */
+      color: white;
+      border: none;
+      border-radius: 2px;
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .subscribe-btn:hover {
+      background: #0066cc; /* Более тёмный синий при наведении */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    .subscribe-btn:active {
+      transform: scale(0.98);
     }
 
     .contact {
@@ -167,6 +231,7 @@
 
     .contact-btn:hover {
       opacity: 0.9;
+      transform: translateX(5px);
     }
 
     .instagram {
@@ -187,6 +252,11 @@
 
     .contact-btn i {
       width: 24px;
+      transition: all 0.3s ease;
+    }
+
+    .contact-btn:hover i {
+      transform: translateX(3px);
     }
   </style>
 </head>
@@ -220,15 +290,8 @@
     <div class="socials">
       <div class="social-item">
         <i class="fab fa-telegram-plane"></i>
-        <span><strong>DevOps</strong> Мысли об IT, образовании и играх. И анонсы сообщества DevOps DevOps-задачник...</span>
-      </div>
-      <div class="social-item">
-        <i class="fab fa-telegram-plane"></i>
-        <span><strong>DevOps</strong> Твои друзья в айти. Добро пожаловать домой 💜 Наш Клуб: boosty.to/DevOps Анонсы...</span>
-      </div>
-      <div class="social-item">
-        <i class="fab fa-telegram-plane"></i>
-        <span><strong>DeusGames</strong> Официальный Telegram-канал: <a href="https://t.me/deusgames" style="color:#a0a0ff" target="_blank" rel="noopener">t.me/deusgames</a></span>
+        <span><strong>@abem</strong> Личный Telegram канал</span>
+        <button class="subscribe-btn" onclick="window.location.href='https://t.me/abem'">Подписаться</button>
       </div>
     </div>
 
@@ -238,7 +301,7 @@
         <i class="fab fa-instagram"></i> @abem
       </a>
       <a href="https://youtube.com/@DevOps" target="_blank" rel="noopener noreferrer" class="contact-btn youtube">
-        <i class="fab fa-youtube"></i> abem
+        <i class="fab fa-youtube"></i> DevOps
       </a>
       <a href="https://vk.com/abem" target="_blank" rel="noopener noreferrer" class="contact-btn vk">
         <i class="fab fa-vk"></i> @abem
