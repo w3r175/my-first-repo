@@ -130,84 +130,6 @@
       text-shadow: 0 0 5px rgba(160, 160, 255, 0.8);
     }
 
-    .socials {
-      margin: 0 20px;
-    }
-
-    .social-item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 12px;
-      margin: 8px 0;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 12px;
-      font-size: 14px;
-      transition: all 0.3s ease;
-    }
-
-    .social-item:hover {
-      background: rgba(255, 255, 255, 0.2);
-      transform: translateX(5px);
-    }
-
-    .social-item i {
-      width: 30px;
-      text-align: center;
-      transition: all 0.3s ease;
-    }
-
-    /* Анимации для иконок социальных сетей */
-    .social-item:hover .fa-telegram-plane {
-      transform: rotate(360deg) scale(1.2);
-      color: #0088cc;
-    }
-
-    .social-item:hover .fa-instagram {
-      transform: rotate(360deg) scale(1.2);
-      color: #E1306C;
-      text-shadow: 0 0 10px rgba(225, 48, 108, 0.7);
-    }
-
-    .social-item:hover .fa-youtube {
-      transform: scale(1.3);
-      color: #FF0000;
-      text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
-    }
-
-    .social-item:hover .fa-vk {
-      transform: scale(1.3);
-      color: #4a76e0;
-      text-shadow: 0 0 10px rgba(74, 118, 224, 0.7);
-    }
-
-    /* Стиль кнопки подписки в стиле YouTube (синяя) */
-    .subscribe-btn {
-      display: inline-block;
-      background: #1e90ff; /* Синий цвет */
-      color: white;
-      border: none;
-      border-radius: 2px;
-      padding: 10px 16px;
-      font-size: 14px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-top: 5px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    }
-
-    .subscribe-btn:hover {
-      background: #0066cc; /* Более тёмный синий при наведении */
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    }
-
-    .subscribe-btn:active {
-      transform: scale(0.98);
-    }
-
     .contact {
       margin-top: 20px;
       padding: 0 20px 20px;
@@ -234,16 +156,16 @@
       transform: translateX(5px);
     }
 
+    .telegram {
+      background: #1e90ff; /* Синий цвет для Telegram */
+    }
+
     .instagram {
       background: #e11d48;
     }
 
     .youtube {
       background: #ff0000;
-    }
-
-    .vk {
-      background: #4a76e0;
     }
 
     .email {
@@ -272,7 +194,7 @@
 
     <!-- Кнопки -->
     <div class="btn-container">
-      <button class="btn" onclick="window.location.href='https://t.me/abem'">
+      <button class="btn">
         <i class="fas fa-paper-plane"></i> Написать
       </button>
       <button class="btn">
@@ -286,28 +208,19 @@
     </div>
     <span class="hide-btn">СКРЫТЬ</span>
 
-    <!-- Соцсети -->
-    <div class="socials">
-      <div class="social-item">
-        <i class="fab fa-telegram-plane"></i>
-        <span><strong>@abem</strong> Личный Telegram канал</span>
-        <button class="subscribe-btn" onclick="window.location.href='https://t.me/abem'">Написать</button>
-      </div>
-    </div>
-
     <!-- Контакты -->
     <div class="contact">
+      <a href="https://t.me/abem" target="_blank" rel="noopener noreferrer" class="contact-btn telegram">
+        <i class="fab fa-telegram-plane"></i> Написать в Telegram
+      </a>
       <a href="https://instagram.com/abem" target="_blank" rel="noopener noreferrer" class="contact-btn instagram">
-        <i class="fab fa-instagram"></i> @abem
+        <i class="fab fa-instagram"></i> Написать в instagram
       </a>
       <a href="https://youtube.com/@DevOps" target="_blank" rel="noopener noreferrer" class="contact-btn youtube">
-        <i class="fab fa-youtube"></i> DevOps
-      </a>
-      <a href="https://vk.com/abem" target="_blank" rel="noopener noreferrer" class="contact-btn vk">
-        <i class="fab fa-vk"></i> @abem
+        <i class="fab fa-youtube"></i> Посмотреть мои ролики
       </a>
       <a href="mailto:abem@astralinux.com" class="contact-btn email">
-        <i class="fas fa-envelope"></i> abem@astralinux.com
+        <i class="fas fa-envelope"></i> Написать на почту
       </a>
     </div>
   </div>
