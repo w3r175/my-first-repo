@@ -145,6 +145,7 @@
 
     .contact {
       margin-top: 20px;
+      padding: 0 20px 20px;
     }
 
     .contact-btn {
@@ -200,7 +201,7 @@
 
     <!-- Кнопки -->
     <div class="btn-container">
-      <button class="btn">
+      <button class="btn" onclick="window.location.href='https://t.me/abem'">
         <i class="fas fa-paper-plane"></i> Написать
       </button>
       <button class="btn">
@@ -226,22 +227,22 @@
       </div>
       <div class="social-item">
         <i class="fab fa-telegram-plane"></i>
-        <span><strong>DeusGames</strong> Геймдев студия DeusGames от DevOps. https://deusgames.ru/</span>
+        <span><strong>DeusGames</strong> Официальный Telegram-канал: <a href="https://t.me/deusgames" style="color:#a0a0ff" target="_blank">t.me/deusgames</a></span>
       </div>
     </div>
 
     <!-- Контакты -->
     <div class="contact">
-      <a href="#" class="contact-btn instagram">
+      <a href="https://instagram.com/abem" target="_blank" rel="noopener noreferrer" class="contact-btn instagram">
         <i class="fab fa-instagram"></i> @abem
       </a>
-      <a href="#" class="contact-btn youtube">
+      <a href="https://youtube.com/@DevOps" target="_blank" rel="noopener noreferrer" class="contact-btn youtube">
         <i class="fab fa-youtube"></i> DevOps
       </a>
-      <a href="#" class="contact-btn vk">
+      <a href="https://vk.com/abem" target="_blank" rel="noopener noreferrer" class="contact-btn vk">
         <i class="fab fa-vk"></i> @abem
       </a>
-      <a href="#" class="contact-btn email">
+      <a href="mailto:abem@astralinux.com" class="contact-btn email">
         <i class="fas fa-envelope"></i> abem@astralinux.com
       </a>
     </div>
@@ -259,15 +260,18 @@
     });
 
     // Скрыть/показать описание по клику
-document.querySelector('.hide-btn').addEventListener('click', function() {
-  const desc = document.querySelector('.description');
-  const isHidden = desc.style.display === 'none';
+    document.querySelector('.hide-btn').addEventListener('click', function() {
+      const desc = document.querySelector('.description');
+      const isHidden = window.getComputedStyle(desc).display === 'none';
 
-  if (isHidden) {
-    desc.style.display = 'block'; // или 'flex', если используете flexbox
-    this.textContent = 'СКРЫТЬ';
-  } else {
-    desc.style.display = 'none';
-    this.textContent = 'ПОКАЗАТЬ';
-  }
-});
+      if (isHidden) {
+        desc.style.display = 'block';
+        this.textContent = 'СКРЫТЬ';
+      } else {
+        desc.style.display = 'none';
+        this.textContent = 'ПОКАЗАТЬ';
+      }
+    });
+  </script>
+</body>
+</html>
