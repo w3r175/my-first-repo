@@ -75,37 +75,6 @@
       margin-right: 8px;
     }
 
-    .btn-container {
-      display: flex;
-      gap: 10px;
-      margin: 20px 20px 0;
-    }
-
-    .btn {
-      flex: 1;
-      padding: 12px;
-      background: rgba(255, 255, 255, 0.2);
-      border: none;
-      border-radius: 12px;
-      color: white;
-      font-size: 14px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-
-    .btn:hover {
-      background: rgba(255, 255, 255, 0.3);
-      transform: translateY(-2px);
-    }
-
-    .btn:active {
-      transform: translateY(0);
-    }
-
     .description {
       padding: 15px;
       background: rgba(255, 255, 255, 0.1);
@@ -121,7 +90,7 @@
       font-size: 12px;
       color: #a0a0ff;
       cursor: pointer;
-      margin: 0 20px 40px;
+      margin: 15px 20px 0;
       transition: all 0.3s ease;
     }
 
@@ -157,7 +126,7 @@
     }
 
     .telegram {
-      background: #1e90ff; /* Синий цвет для Telegram */
+      background: #1e90ff;
     }
 
     .instagram {
@@ -189,18 +158,8 @@
 
     <!-- Имя -->
     <h1 class="name">Бем Алексей</h1>
-    <p class="handle">@DevOps</p>
-    <p class="title">Начинающий DevOps-инженер</p>
-
-    <!-- Кнопки -->
-    <div class="btn-container">
-      <button class="btn">
-        <i class="fas fa-paper-plane"></i> Написать
-      </button>
-      <button class="btn">
-        <i class="fas fa-share-alt"></i> Поделиться
-      </button>
-    </div>
+    <p class="handle">Работаю в компании АСТРА КОНСАЛТИНГ ООО</p>
+    <p class="title">Инженер в "Отдел внедрения и сопровождения </p>
 
     <!-- Описание -->
     <div class="description">
@@ -214,28 +173,18 @@
         <i class="fab fa-telegram-plane"></i> Написать в Telegram
       </a>
       <a href="https://instagram.com/abem" target="_blank" rel="noopener noreferrer" class="contact-btn instagram">
-        <i class="fab fa-instagram"></i> Написать в instagram
+        <i class="fab fa-instagram"></i> @abem
       </a>
       <a href="https://youtube.com/@DevOps" target="_blank" rel="noopener noreferrer" class="contact-btn youtube">
-        <i class="fab fa-youtube"></i> Посмотреть мои ролики
+        <i class="fab fa-youtube"></i> DevOps
       </a>
       <a href="mailto:abem@astralinux.com" class="contact-btn email">
-        <i class="fas fa-envelope"></i> Написать на почту
+        <i class="fas fa-envelope"></i> abem@astralinux.com
       </a>
     </div>
   </div>
 
   <script>
-    // Анимация кнопок
-    document.querySelectorAll('.btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        btn.style.transform = 'scale(0.9)';
-        setTimeout(() => {
-          btn.style.transform = '';
-        }, 100);
-      });
-    });
-
     // Скрыть/показать описание по клику
     document.querySelector('.hide-btn').addEventListener('click', function() {
       const desc = document.querySelector('.description');
