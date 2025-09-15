@@ -258,11 +258,16 @@
       });
     });
 
-    // Скрыть описание
-    document.querySelector('.hide-btn').addEventListener('click', () => {
-      const desc = document.querySelector('.description');
-      desc.style.display = 'none';
-    });
-  </script>
-</body>
-</html>
+    // Скрыть/показать описание по клику
+document.querySelector('.hide-btn').addEventListener('click', function() {
+  const desc = document.querySelector('.description');
+  const isHidden = desc.style.display === 'none';
+
+  if (isHidden) {
+    desc.style.display = 'block'; // или 'flex', если используете flexbox
+    this.textContent = 'СКРЫТЬ';
+  } else {
+    desc.style.display = 'none';
+    this.textContent = 'ПОКАЗАТЬ';
+  }
+});
