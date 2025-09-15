@@ -31,57 +31,55 @@
       border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
+    .profile-header {
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+      gap: 20px;
+    }
+
     .avatar {
       width: 140px;
       height: 140px;
       border-radius: 50%;
       object-fit: cover;
-      margin: 30px auto;
       border: 4px solid white;
       box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
     }
 
+    .profile-info {
+      flex: 1;
+    }
+
     .name {
-      text-align: center;
+      text-align: left;
       font-size: 24px;
       font-weight: bold;
-      margin: 15px 0;
+      margin: 0 0 8px;
     }
 
     .handle {
-      text-align: center;
+      text-align: left;
       color: #ddd;
       font-size: 16px;
       margin-bottom: 8px;
     }
 
     .title {
-      text-align: center;
+      text-align: left;
       font-size: 14px;
       color: #fff;
       margin-bottom: 20px;
-    }
-
-    .location {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 10px 0;
-      font-size: 14px;
-      color: #fff;
-    }
-
-    .location i {
-      margin-right: 8px;
     }
 
     .description {
       padding: 15px;
       background: rgba(255, 255, 255, 0.1);
       border-radius: 12px;
-      margin: 20px 20px 5px;
+      margin: 0 20px 20px;
       font-size: 14px;
       line-height: 1.5;
+      text-align: left;
     }
 
     .hide-btn {
@@ -153,21 +151,21 @@
 </head>
 <body>
   <div class="container">
-    <!-- Аватар -->
-    <img src="https://distribution.faceit-cdn.net/images/cdd7ef21-1eb5-4b77-88fd-d3a09d964b5b.jpeg" alt="Аватар" class="avatar" />
-
-    <!-- Имя -->
-    <h1 class="name">Бем Алексей</h1>
-    <p class="handle">Работаю в компании АСТРА КОНСАЛТИНГ ООО</p>
-    <p class="title">Инженер внедрения и сопровождения </p>
+    <!-- Профиль -->
+    <div class="profile-header">
+      <img src="https://distribution.faceit-cdn.net/images/cdd7ef21-1eb5-4b77-88fd-d3a09d964b5b.jpeg" alt="Аватар" class="avatar" />
+      <div class="profile-info">
+        <h1 class="name">Бем Алексей</h1>
+        <p class="handle">Работаю в компании АСТРА КОНСАЛТИНГ ООО</p>
+        <p class="title">Инженер внедрения и сопровождения</p>
+      </div>
+    </div>
 
     <!-- Описание -->
     <div class="description">
       <p>«Всем привет! Хочу поделиться своей целью — стать DevOps-инженером. Мой путь немного нестандартный: я не заканчивал профильный вуз, а учился сам, по статьям, курсам и, самое главное, пробуя всё на практике.
 
-Меня завораживает идея, что можно автоматизировать процессы, сделать развертывание приложений быстрым и надежным, а главное — помочь разработчикам и бизнесу работать эффективнее. Я уже начинаю путь: дружу с Linux, Docker, Git и планирую Kubernetes и инструменты CI/CD.
-
-Я знаю, что впереди еще много всего, но я горю этим и готов учиться дальше. Если у вас есть совет, полезный ресурс или просто слова поддержки — буду рад! Также буду благодарен за возможность присоединиться к крутой команде в качестве стажера или джуниора.»</p>
+Меня завораживает идея, что можно автоматизировать процессы, сделать развертывание приложений быстрым и надежным, а главное — помочь разработчикам и бизнесу работать эффективнее. Я уже прошел часть пути: дружу с Linux, Docker, Git и постепенно осваиваю Kubernetes и инструменты CI/CD. Я знаю, что впереди еще много всего, но я горю этим и готов учиться дальше. Если у вас есть совет, полезный ресурс или просто слова поддержки — буду рад! Также буду благодарен за возможность присоединиться к крутой команде в качестве стажера или джуниора.»</p>
     </div>
     <span class="hide-btn">СКРЫТЬ</span>
 
